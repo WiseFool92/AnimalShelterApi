@@ -92,14 +92,18 @@ dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0
 ```sh
 dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0 
 ```
-4. Implement Migrations
+4. Implement Swagger
+```sh
+dotnet add package Swashbuckle.AspNetCore -v 5.0.0
+```
+5. Implement Migrations
 ```sh
 dotnet ef migrations add Initial
 ```
 ```sh
 dotnet ef database update
 ```
-5. Seed the database
+6. Seed the database
 ```sh
 dotnet ef migrations add SeedData
 ```
@@ -113,12 +117,11 @@ dotnet ef database update
 #### Animal Shelter Api
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The user can GET all reviews about travel destinations | 'http://localhost:5000/{reviews}' | 'List of reviews' |
-| The user can POST reviews about travel destinations | 'http://localhost:5000/{country}{city}{review}' | 'Populate a review' |
-| The user can view popular travel destinations | 'http://localhost:5000/{country}{city}{review}' | 'List of popular reviews' |
-| The user Edit their travel reviews | 'http://localhost:5000/{country}{city}{review}{PUT}' | 'Edits review' |
-| The user DELETE their travel reviews | 'http://localhost:5000/{country}{city}{review}{DELETE}' | 'Deletes review' |
-| The user view a random selection of travel reviews | 'http://localhost:5000/{country}{city}{review}{RANDOM}' | 'List of random reviews' |
+| The user can GET animal information | 'http://localhost:5000/{shelter}' | 'List of animals' |
+| The user can POST data sheets about animlas at the shelter | 'http://localhost:5000/{shelter}{animal}' | 'Populate a data sheet' |
+| The user can view whats avalible for adoption | 'http://localhost:5000/{shelter}{animal}' | 'List of animals' |
+| The user Edit the animals | 'http://localhost:5000/{shelter}{animal}{PUT}' | 'Edits animal' |
+| The user can DELETE an animal bio | 'http://localhost:5000/{shelter}{animal}{DELETE}' | 'Deletes bio' |
 
 
 ---
