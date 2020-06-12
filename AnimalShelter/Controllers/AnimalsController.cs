@@ -19,7 +19,6 @@ namespace AnimalShelter.Controllers
             _db = db;
         }
 
-        // GET api/animals
         [HttpGet]
         public ActionResult<IEnumerable<Animal>> Get(string name, string species, string family, string gender, string mass, string diet, string period, string preferredfood)
         {
@@ -59,14 +58,12 @@ namespace AnimalShelter.Controllers
             return query.ToList();
         }
 
-        // GET api/animals/5
         [HttpGet("{id}")]
         public ActionResult<Animal> Get(int id)
         {
             return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
         }
 
-        // POST api/animals
         [HttpPost]
         public void Post([FromBody] Animal animal)
         {
@@ -74,7 +71,6 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // PUT api/animals/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Animal animal)
         {
@@ -83,7 +79,6 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // DELETE api/animals/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
