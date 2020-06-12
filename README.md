@@ -8,6 +8,8 @@ _This application is an Animal Shelter Api_
 
 _This application is meant to be viewed in the browser & connected to a database which holds the shelter information. It will need a .NET Core Sdk 3.1 or 2.2 & ASP.Net 3.1 or 2.2 download. It will need a mysql workbench 8.0 to be connected to it_
 
+_This application is Swagger & CORS ready. With progress towards token authentication and userlogin. I didn't get to fininsh updating the startup file to be functional for Tokens & login_
+
 ## Setup/Installation Requirements
 
 _Make sure you have [git version control](https://git-scm.com/downloads) installed on your computer._
