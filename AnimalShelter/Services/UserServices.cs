@@ -11,5 +11,9 @@ using AnimalShelter.Helpers;
 
 namespace AnimalShelter.Services
 {
-  
+  public interface IUserService
+  {
+    User Auth(string username, string password);
+    
+  }
 }
