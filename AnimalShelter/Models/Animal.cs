@@ -16,15 +16,27 @@ namespace AnimalShelter.Models
 
     [Required]
     [StringLength(100)]
-    public string Breed { get; set; }
+    public string Family { get; set; }
 
     [Required]
-    [Range(0, 20, ErrorMessage = "Apologies this value has to be between  0 - 20")]
+    [Range(0, 500, ErrorMessage = "Apologies this value has to be between  0 - 500")]
     public int Age { get; set; }
 
     public string ImgUrl { get; set; }
 
     [Required]
     public string Gender { get; set; }
+
+    [StringLength(255)]
+    public string Mass { get; set; }
+
+    [StringLength(255)]
+    public string Diet { get; set; }
+
+    [StringLength(255)]
+    public string Period { get; set; }
+
+    [StringLength(255)]
+    public string PreferredFood { get; set; }
   }
 }
