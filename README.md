@@ -73,42 +73,7 @@ dotnet test
 
 1. Open MySql Community Installer and reconfigure (legacy password, uncheck windows services)
 2. Open MySql Workbench
-3. On the bar at the top of the page with many options click Create New Schema in the connected server (it looks like triple stacked silicone wafers)
-4. example_example (naming scheme)
-5. Use Migrations to seed & populate data
-
-## Connecting to an API
-
-1. Api Framework
-```sh
-dotnet new webapi --framework netcoreapp2.2
-```
-2. Comment out of Startup.cs
-```sh
-app.UseHttpsRedirection();
-```
-3. Implement data handling packages
-```sh
-dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0
-```
-```sh
-dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0 
-```
-4. Implement Swagger
-```sh
-dotnet add package Swashbuckle.AspNetCore -v 5.0.0
-```
-5. Implement Migrations
-```sh
-dotnet ef migrations add Initial
-```
-```sh
-dotnet ef database update
-```
-6. Seed the database
-```sh
-dotnet ef migrations add SeedData
-```
+3. Use Migrations to seed & populate data 
 ```sh
 dotnet ef database update
 ```
@@ -119,11 +84,12 @@ dotnet ef database update
 #### Animal Shelter Api
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The user can GET animal information | 'http://localhost:5000/{shelter}' | 'List of animals' |
-| The user can POST data sheets about animlas at the shelter | 'http://localhost:5000/{shelter}{animal}' | 'Populate a data sheet' |
-| The user can view whats avalible for adoption | 'http://localhost:5000/{shelter}{animal}' | 'List of animals' |
-| The user Edit the animals | 'http://localhost:5000/{shelter}{animal}{PUT}' | 'Edits animal' |
-| The user can DELETE an animal bio | 'http://localhost:5000/{shelter}{animal}{DELETE}' | 'Deletes bio' |
+| The user can GET animal information | 'http://localhost:5000/api/Animal' | 'List of animals' |
+| The user can POST data sheets about animlas at the shelter | 'http://localhost:5000/api/Animals' | 'Populate a data sheet' |
+| The user can GET by Id | '/api/Animal/{id}' | 'Returns animal with matching ID' |
+| The user can Edit the animals via PUT request | '/api/Animal/{id}' | 'Edits animal w/matching Id' |
+| The user can DELETE an animal bio | 'http://localhost:5000/api/animals/{id}' | 'Deletes bio' |
+| Swagger UI endpoint for further exploration @ /index.html
 
 
 ---
