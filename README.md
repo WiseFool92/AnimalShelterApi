@@ -89,7 +89,7 @@ dotnet ef database update
 | The user can GET by Id | '/api/Animal/{id}' | 'Returns animal with matching ID' |
 | The user can Edit the animals via PUT request | '/api/Animal/{id}' | 'Edits animal w/matching Id' |
 | The user can DELETE an animal bio | 'http://localhost:5000/api/animals/{id}' | 'Deletes bio' |
-| Swagger UI endpoint for further exploration @ /index.html
+| Swagger UI endpoint for further exploration @ /index.html (http://localhost:5000/)
 
 
 ---
