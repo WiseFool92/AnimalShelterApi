@@ -84,13 +84,12 @@ dotnet ef database update
 #### Animal Shelter Api
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The user can GET animal information | 'http://localhost:5000/api/Animal' | 'List of animals' |
-| The user can POST data sheets about animlas at the shelter | 'http://localhost:5000/api/Animals' | 'Populate a data sheet' |
-| The user can GET by Id | '/api/Animal/{id}' | 'Returns animal with matching ID' |
-| The user can Edit the animals via PUT request | '/api/Animal/{id}' | 'Edits animal w/matching Id' |
-| The user can DELETE an animal bio | 'http://localhost:5000/api/animals/{id}' | 'Deletes bio' |
-| Swagger UI endpoint for further exploration @ /index.html (http://localhost:5000/)
-
+| The user can GET animal information | 'http://localhost:5000/api/Animals' | 'List of animals' |
+| The user can POST data sheets about animals at the shelter | 'http://localhost:5000/api/Animals' | 'Populate a data sheet' |
+| The user can GET by Id | '/api/Animals/{id}' | 'Returns animal with matching ID' |
+| The user can Edit the animals via PUT request | '/api/Animals/{id}' | 'Edits animal w/matching Id' |
+| The user can DELETE an animal bio | 'http://localhost:5000/api/Animals/{id}' | 'Deletes bio' |
+| Swagger UI endpoint for further exploration @ http://localhost:5000/index.html
 
 ---
 ## Known Bugs
